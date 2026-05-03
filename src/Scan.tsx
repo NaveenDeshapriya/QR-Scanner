@@ -16,7 +16,7 @@ export default function Scan() {
     const [result, setResult] = useState<string | null>(null);
     const [zoom, setZoom] = useState(0);
 
-    const CloseApp = () => {
+    const closeApp = () => {
         Alert.alert("Exit App", "Do you want exit app!", [
             {
                 text: "Cancel",
@@ -33,7 +33,7 @@ export default function Scan() {
         permission();
         navigation.addListener('beforeRemove', (e) => {
             e.preventDefault();
-            CloseApp();
+            closeApp();
         });
     }, []);
 
