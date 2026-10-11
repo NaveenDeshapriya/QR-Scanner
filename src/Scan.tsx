@@ -9,6 +9,7 @@ export default function Scan() {
 
     type RootProp = NativeStackNavigationProp<Params, "scan">;
     const navigation = useNavigation<RootProp>();
+    
     const permission = async () => {
         const getPermission = await Camera.requestCameraPermissionsAsync();
         getPermission.status === "granted" ? console.log("Camera permission granted") : console.log("Camera permission denied");
